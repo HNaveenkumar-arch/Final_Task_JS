@@ -30,8 +30,7 @@ function showProducts(data) {
             <p class="price-tag">$${product.price.toFixed(2)}</p>
             <p>${product.category}</p>
             <p>⭐ ${product.rating.rate}</p>
-            <button onclick="addToCart(${product.id})"style = "cursor: pointer; background-color:green; height:30px; width:100px; ">Add</button>
-        `;
+            <button onclick="addToCart(${product.id})"style = "cursor: pointer; background-color:green; height:30px; width:100px; ">Add</button>`;
 
         productList.appendChild(div);
     });
@@ -44,12 +43,12 @@ function filterData() {
     let text = document.getElementById("search").value.toLowerCase();
     let cat = document.getElementById("category").value;
 
-    let filtered = allProducts.filter(p =>
+    let filter1 = allProducts.filter(p =>
         p.title.toLowerCase().includes(text) &&
         (cat === "" || p.category === cat)
     );
 
-    showProducts(filtered);
+    showProducts(filter1);
 }
 function lowHigh() {
     let sorted = [...allProducts].sort((a,b)=>a.price-b.price);

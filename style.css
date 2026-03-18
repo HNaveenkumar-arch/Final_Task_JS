@@ -64,6 +64,9 @@ body {
   border-radius: 10px;
   text-align: center;
 }
+#loading{
+  color: antiquewhite;
+}
 
 .product-item img {
   width: 100%;
@@ -81,7 +84,7 @@ body {
 .cart-view {
   display: none;
   position: absolute;
-  top: 130px;
+  top: 175px;
   right: 50px;
   background: rgb(207, 120, 185);
   border: 1px solid black;
