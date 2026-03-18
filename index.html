@@ -1,36 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NK Company Products</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+<h1 class="main-title">NK Company Products</h1>
+<div class="main">
+  <div>
+    <input type="text" id="search" placeholder="Search products..." />
 
-<h1 class="main-title">Products...</h1>
-<input type="text" id="search" placeholder="Search products...">
+    <select id="category">
+      <option value="">All</option>
+      <option value="men's clothing">Men</option>
+      <option value="women's clothing">Women</option>
+      <option value="electronics">Electronics</option>
+      <option value="jewelery">Jewelry</option>
+    </select>
 
-<select id="category">
-  <option value="">All</option>
-  <option value="men's clothing">Men</option>
-  <option value="women's clothing">Women</option>
-  <option value="electronics">Electronics</option>
-  <option value="jewelery">Jewelry</option>
-</select>
+    <button onclick="lowHigh()" class="btn">Low → High</button>
+    <button onclick="highLow()" class="btn">High → Low</button>
+  </div>
+  <div class="cart-cls">
+    <button class="viewbtn">
+      Cart (<span id="count">0</span>)
+    </button>
 
-<button onclick="lowHigh()">Low → High</button>
-<button onclick="highLow()">High → Low</button>
-<h3>Cart (<span id="count">0</span>)</h3>
-<div id="cart"></div>
-<p>Total: $<span id="total">0</span></p>
+    <div class="cart-view">
+      <div id="cart"></div>
+      <p>Total: $<span id="total">0</span></p>
+    </div>
 
-<p id="loading">Loading...</p>
-    
+    <p id="loading">Loading...</p>
+  </div>
+</div>
 <div class="products-grid" id="productList"></div>
 <div id="errorMsg" class="error-box"></div>
 
-<script src="./script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>

@@ -30,7 +30,7 @@ function showProducts(data) {
             <p class="price-tag">$${product.price.toFixed(2)}</p>
             <p>${product.category}</p>
             <p>⭐ ${product.rating.rate}</p>
-            <button onclick="addToCart(${product.id})"style = "cursor: pointer;">Add</button>
+            <button onclick="addToCart(${product.id})"style = "cursor: pointer; background-color:green; height:30px; width:100px; ">Add</button>
         `;
 
         productList.appendChild(div);
